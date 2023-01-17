@@ -9,7 +9,7 @@ import UIKit
 import SDWebImage
 
 class ResultViewController: UIViewController {
-    
+
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var resultText: UILabel!
     @IBOutlet weak var resultImage: UIImageView!
@@ -24,5 +24,5 @@ class ResultViewController: UIViewController {
         resultText.text = articleText
         resultImage.sd_setImage(with: URL(string: articleImageURL))
     }
-
+    
 }
