@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="qWiki" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WikiLogo" translatesAutoresizingMaskIntoConstraints="NO" id="FBq-4F-R4W">
+                                <rect key="frame" x="70" y="321" width="290" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FBq-4F-R4W" secondAttribute="height" multiplier="1:1" id="Hgu-KD-prl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="qWiki" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swl-YP-SjT">
+                                <rect key="frame" x="150.33333333333337" y="619" width="129.66666666666663" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cgy-Uh-jq0">
+                                <rect key="frame" x="20" y="89" width="390" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nnK-zP-GJo">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemFillColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="search"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTd-Gz-InH">
+                                        <rect key="frame" x="350" y="0.99999999999999645" width="40" height="38.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7sV-gi-Jq1"/>
+                                            <constraint firstAttribute="width" constant="40" id="v1F-S8-CW0"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" backgroundImage="magnifyingglass" catalog="system"/>
+                                        <connections>
+                                            <action selector="searchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QxU-DP-WXJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FBq-4F-R4W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D9S-ww-IAq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cgy-Uh-jq0" secondAttribute="trailing" id="GvC-QK-iFN"/>
+                            <constraint firstItem="FBq-4F-R4W" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="H9Q-gb-27m"/>
+                            <constraint firstItem="swl-YP-SjT" firstAttribute="top" secondItem="FBq-4F-R4W" secondAttribute="bottom" constant="8" symbolic="YES" id="h5e-i8-60y"/>
+                            <constraint firstItem="cgy-Uh-jq0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lkY-1O-tEl"/>
+                            <constraint firstItem="cgy-Uh-jq0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="30" id="mpf-IU-ERT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FBq-4F-R4W" secondAttribute="trailing" constant="50" id="r6C-tk-uxR"/>
+                            <constraint firstItem="FBq-4F-R4W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="z9E-rh-Gxs"/>
+                            <constraint firstItem="swl-YP-SjT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zpc-nL-kJk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchField" destination="nnK-zP-GJo" id="kwr-3p-m9p"/>
+                        <segue destination="Lcb-at-618" kind="presentation" identifier="toResult" id="VUn-rv-EwI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="103.25581395348837" y="-34.763948497854081"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="aDW-gP-oug">
+            <objects>
+                <viewController id="Lcb-at-618" customClass="ResultViewController" customModule="qWiki" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7dn-Mw-7BJ">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="ye5-yX-vcj">
+                                <rect key="frame" x="20" y="69" width="390" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="DMj-YW-47u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="tEW-ks-DGA">
+                                <rect key="frame" x="20" y="121.99999999999997" width="390" height="409.33333333333326"/>
+                                <string key="text">Таха Яссери — доцент школы социологии, у него есть традиция в конце каждого года изучать статистику самых просматриваемых статей «Википедии» за год. В 2020 году пандемия COVID-19, президентские выборы в США и смерть Коби Брайанта стали одними из самых запоминающихся событий. 2021 год запомнился читателям Wikipedia «Игрой в кальмара» от Netflix, чемпионатом Европы по футболу и смертью принца Филиппа, герцога Эдинбургского. Но в 2022 году список несколько неожиданно возглавила Клеопатра.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PgL-Ig-nKr">
+                                <rect key="frame" x="20" y="561.33333333333337" width="390" height="301.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PgL-Ig-nKr" secondAttribute="height" multiplier="53:41" id="9Jy-Yv-VYg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AtB-hm-jED"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ye5-yX-vcj" secondAttribute="trailing" id="0aC-4u-ZC7"/>
+                            <constraint firstItem="ye5-yX-vcj" firstAttribute="leading" secondItem="7dn-Mw-7BJ" secondAttribute="leadingMargin" id="4b1-aq-Nh0"/>
+                            <constraint firstItem="ye5-yX-vcj" firstAttribute="top" secondItem="7dn-Mw-7BJ" secondAttribute="topMargin" constant="10" id="6tm-MM-yr6"/>
+                            <constraint firstItem="tEW-ks-DGA" firstAttribute="leading" secondItem="7dn-Mw-7BJ" secondAttribute="leadingMargin" id="B64-J2-Sx0"/>
+                            <constraint firstItem="PgL-Ig-nKr" firstAttribute="leading" secondItem="7dn-Mw-7BJ" secondAttribute="leadingMargin" id="Q0d-Ll-lfJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tEW-ks-DGA" secondAttribute="trailing" id="haq-Mg-1Dx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PgL-Ig-nKr" secondAttribute="trailing" id="ljf-1Z-qZZ"/>
+                            <constraint firstItem="PgL-Ig-nKr" firstAttribute="top" secondItem="tEW-ks-DGA" secondAttribute="bottom" constant="30" id="mQ5-BL-3F3"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="PgL-Ig-nKr" secondAttribute="bottom" id="uLQ-GD-JTs"/>
+                            <constraint firstItem="tEW-ks-DGA" firstAttribute="top" secondItem="ye5-yX-vcj" secondAttribute="bottom" constant="5" id="uRF-51-xSe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultImage" destination="PgL-Ig-nKr" id="f6p-Tr-7vD"/>
+                        <outlet property="resultLabel" destination="ye5-yX-vcj" id="mlE-oH-TTJ"/>
+                        <outlet property="resultText" destination="tEW-ks-DGA" id="8qi-iu-hEg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DVZ-qO-bPq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817.5" y="-35.91549295774648"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="WikiLogo" width="352.66665649414062" height="352.66665649414062"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
